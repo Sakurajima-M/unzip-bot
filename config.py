@@ -17,8 +17,8 @@ class Config:
     MONGODB_URL = os.environ.get("MONGODB_URL", f"mongodb+srv://Kazuma:{db_password}@deployment.zwliu.mongodb.net/?retryWrites=true&w=majority&appName=deployment")
     MONGODB_DBNAME = os.environ.get("MONGODB_DBNAME", "deployment")
     BOT_OWNER = int(os.environ.get("BOT_OWNER", "1132901778"))
-    DOWNLOAD_LOCATION = r"C:\Users\ADMIN\Downloads\Telegram Desktop"
-    THUMB_LOCATION = r"C:\Users\ADMIN\Downloads\Telegram Desktop"
+    DOWNLOAD_LOCATION = f"{os.path.dirname(__file__)}/Downloaded"
+    THUMB_LOCATION = f"{os.path.dirname(__file__)}/Thumbnails"
     TG_MAX_SIZE = 2097152000
     MAX_MESSAGE_LENGTH = 4096
     # Default chunk size (0.005 MB → 1024*6) Increase if you need faster downloads
