@@ -5,8 +5,7 @@ import subprocess
 
 from asyncio import get_running_loop
 from functools import partial
-from pykeyboard import InlineKeyboard
-from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboard, InlineKeyboardButton
 
 from unzipper import LOGGER
 from unzipper.modules.bot_data import Messages
