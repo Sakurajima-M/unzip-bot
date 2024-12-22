@@ -5,7 +5,7 @@ import subprocess
 
 from asyncio import get_running_loop
 from functools import partial
-from pyrogram.types import InlineKeyboard, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from unzipper import LOGGER
 from unzipper.modules.bot_data import Messages
@@ -144,7 +144,7 @@ async def merge_files(iinput, ooutput, password=None):
 # Make keyboard
 async def make_keyboard(paths, user_id, chat_id, unziphttp, rzfile=None):
     num = 0
-    i_kbd = InlineKeyboard(row_width=1)
+    i_kbd = InlineKeyboardMarkup(row_width=1)
     data = []
     if unziphttp:
         data.append(
@@ -182,7 +182,7 @@ async def make_keyboard(paths, user_id, chat_id, unziphttp, rzfile=None):
 
 
 async def make_keyboard_empty(user_id, chat_id, unziphttp, rzfile=None):
-    i_kbd = InlineKeyboard(row_width=2)
+    i_kbd = InlineKeyboardMarkup(row_width=2)
     data = []
     if unziphttp:
         data.append(
