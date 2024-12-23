@@ -22,6 +22,7 @@ COPY install_unrar.sh /tmp/install_unrar.sh
 
 RUN pip install -U pip setuptools wheel && \
     pip install -r /tmp/requirements.txt && \
+    chmod +x /tmp/install_unrar.sh && \
     /tmp/install_unrar.sh
 
 FROM python:3.12-alpine
