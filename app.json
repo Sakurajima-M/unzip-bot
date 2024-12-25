@@ -29,6 +29,10 @@
         "MONGODB_URL": {
             "description": "Your MongoDB url, get it from https://www.mongodb.com/",
             "required": true
+        },
+        "AUTHORIZED_GROUPS": {
+            "description": "Comma-separated list of group IDs where the bot should work (e.g. -1001234567890,-1001234567891)",
+            "required": false
         }
     },
     "formation": {

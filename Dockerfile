@@ -20,7 +20,8 @@ WORKDIR /tmp
 COPY requirements.txt /tmp/requirements.txt
 COPY install_unrar.sh /tmp/install_unrar.sh
 
-RUN pip install -U pip setuptools wheel && \
+RUN chmod +x /tmp/install_unrar.sh && \
+    pip install -U pip setuptools wheel && \
     pip install -r /tmp/requirements.txt && \
     /tmp/install_unrar.sh
 

@@ -43,6 +43,7 @@ And much more :fire: Dive into the code to find out :hand_over_mouth:
 - `MONGODB_DBNAME` - *(optional)* A custom name for the MongoDB database, useful if you deploy multiple instances of the bot on the same account. Defaults to `Unzipper_Bot`
 - `MONGODB_URL` - Your MongoDB URL ([**tutorial here**](./CreateMongoDB.md))
 - `LOGS_CHANNEL` - Make a private channel and get its ID (search on Google if you don't know how to do). Using a group works as well, just add [`Rose`](https://t.me/MissRose_bot?startgroup=startbot), then send `/id` (In both cases, **make sure to add your bot to the channel/group as an admin !**)
+- `AUTHORIZED_GROUPS` - *(optional)* Comma-separated list of group IDs where the bot should work. Leave empty to allow all groups.
 
 ## Commands :writing_hand:
 Copy-paste those to BotFather when he asks you for them

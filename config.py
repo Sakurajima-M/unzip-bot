@@ -36,3 +36,7 @@ class Config:
     TG_MAX_SIZE = 2097152000
     THUMB_LOCATION = f"{os.path.dirname(__file__)}/Thumbnails"
     VERSION = os.environ.get("UNZIPBOT_VERSION", "7.1.4a")
+    AUTHORIZED_GROUPS = [
+        int(x) for x in os.environ.get("AUTHORIZED_GROUPS", "").split(",") 
+        if x.strip("-").isdigit()
+    ] if os.environ.get("AUTHORIZED_GROUPS") else []
