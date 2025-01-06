@@ -1,7 +1,8 @@
 import os
-
 import psutil
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class Config:
     APP_ID = int(os.environ.get("APP_ID"))
