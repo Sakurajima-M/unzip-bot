@@ -32,9 +32,9 @@ ARG VERSION="7.1.4a"
 LABEL org.opencontainers.image.authors="EDM115 <unzip@edm115.dev>"
 LABEL org.opencontainers.image.base.name="python:3.12-alpine"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.source="https://github.com/EDM115/unzip-bot.git"
+LABEL org.opencontainers.image.source="https://github.com/Sakurajima-M/unzip-bot.git"
 LABEL org.opencontainers.image.title="unzip-bot"
-LABEL org.opencontainers.image.url="https://github.com/EDM115/unzip-bot"
+LABEL org.opencontainers.image.url="https://github.com/Sakurajima-M/unzip-bot"
 LABEL org.opencontainers.image.version=${VERSION}
 
 RUN apk update && \
@@ -64,7 +64,7 @@ WORKDIR /app
 COPY --from=build /venv /venv
 COPY --from=build /usr/local/bin/unrar /tmp/unrar
 
-RUN git clone -b v7 --single-branch https://github.com/EDM115/unzip-bot.git /app && \
+RUN git clone --single-branch https://github.com/Sakurajima-M/unzip-bot /app && \
     install -m 755 /tmp/unrar /usr/local/bin && \
     rm -rf /tmp/unrar
 
